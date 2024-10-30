@@ -56,7 +56,11 @@ class PengunjungController extends Controller
      */
     public function show(Pengunjung $pengunjung)
     {
-        //
+        $pengunjung = Pengunjung::find($pengunjung);
+        $data['success'] = true;
+        $data['message'] = 'detail data pengunjung';
+        $data['data'] = $pengunjung;
+        return response()->json($data, Response::HTTP_OK);
     }
 
     /**
