@@ -54,7 +54,7 @@ class PengunjungController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Pengunjung $pengunjung)
+    public function show($pengunjung)
     {
         $pengunjung = Pengunjung::find($pengunjung);
         $data['success'] = true;
